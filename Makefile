@@ -4,7 +4,7 @@ CXXFLAGS = -Wall -Wextra -Wswitch-enum -std=c++11 -pedantic -fno-exceptions -fex
 INCLUDE_FILES = -I./include
 LIB_FILES = -L./lib
 
-SRC_FILES = src/main.cpp
+SRC_FILES = main.cpp
 
 TARGET = main.exe
 
