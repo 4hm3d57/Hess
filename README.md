@@ -28,7 +28,7 @@ The project is still in development, with plans to integrate video playback func
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/4hm3d57/hess.git
+   git clone https://github.com/4hm3d57/Hess.git
    cd Hess
    # Building the project
    make
