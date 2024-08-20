@@ -9,6 +9,7 @@ The project is still in development, with plans to integrate video playback func
 - **Playback Controls**: 
   - **Play/Pause**: Toggle playback using the spacebar.
   - **Volume Control**: Increase/decrease volume using the arrow keys.
+  - **Speed/Rewind Control**: Speed/rewind audio time using right/left keys.
 - **Progress Bar**: Visual representation of the music playback progress.
 - **Volume Bar**: Visual indication of the current volume level.
 
