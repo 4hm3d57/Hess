@@ -42,8 +42,6 @@ int main() {
 		// Draw the progress bars
 		render_bar(bar, vbar, rt, state);
 		EndDrawing();
-
-
 	}
 
 	

@@ -43,7 +43,7 @@ void input_keys(BoolState &state, VolBar &vbar, RemTime &rt){
     }
 
 
-    //rewind the audio by 10 seconds
+    //rewinding the audio by 10 seconds
     if(IsKeyPressed(KEY_LEFT) && state.musicLoaded){
         rt.timePlayed -= 10.0f;
         if(rt.timePlayed < 0.0f) rt.timePlayed = 0.0f;
