@@ -1,6 +1,5 @@
 #include "../include/raylib/raylib.h"
 #include "../include/headers/keys.h"
-#include "../include/headers/struct.h"
 
 
 

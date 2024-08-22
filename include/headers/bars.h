@@ -3,7 +3,7 @@
 
 
 #include "../raylib/raylib.h"
-#include "struct.h"
+#include "globals.h"
 
 
 // progress bar

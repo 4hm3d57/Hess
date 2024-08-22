@@ -1,5 +1,5 @@
-#ifndef STRUCT_H
-#define STRUCT_H
+#ifndef GLOBALS_H
+#define GLOBALS_H
 
 #include "../raylib/raylib.h"
 
@@ -40,6 +40,19 @@ struct BoolState {
 	bool isPaused;
 
     BoolState() : musicLoaded(false), isPaused(false) {}
+};
+
+
+struct Button {
+    Rectangle bounds;
+    Texture2D icon;
+    bool isPressed;
+
+    Button(int x, int y, int width, int height, const char* iconPath);
+    ~Button();
+
+    void Draw();
+    bool IsClicked();
 };
 
 

@@ -3,7 +3,7 @@
 
 
 #include "../raylib/raylib.h"
-#include "struct.h"
+#include "globals.h"
 #include <string>
 #include <cstring>
 

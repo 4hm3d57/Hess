@@ -2,9 +2,9 @@
 
 void DrawProgressBar(ProgBar &bar, RemTime &rt) {
     int musicProg = (int)(bar.barX * rt.progress);  
-    DrawRectangle(5, 550, bar.barX, bar.barY, DARKGRAY);  
-    DrawRectangle(5, 550, musicProg, bar.barY, RED);
-    DrawText(TextFormat("Time: %02d:%02d:%02d", rt.remHr, rt.remMin, rt.remSec), 5, 550, 20, BLACK);  
+    DrawRectangle(20, 530, bar.barX, bar.barY, DARKGRAY);  
+    DrawRectangle(20, 530, musicProg, bar.barY, RED);
+    DrawText(TextFormat("Time: %02d:%02d:%02d", rt.remHr, rt.remMin, rt.remSec), 20, 530, 20, BLACK);  
 }
 
 void DrawVolumeBar(VolBar &vbar) {

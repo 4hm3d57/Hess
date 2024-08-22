@@ -3,7 +3,7 @@
 
 
 #include "../raylib/raylib.h"
-#include "struct.h"
+#include "globals.h"
 
 
 void input_keys(BoolState &state, VolBar &vbar, RemTime &rt);

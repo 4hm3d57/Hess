@@ -1,11 +1,14 @@
 #include "../include/headers/dragndrop.h"
 #include "../include/headers/bars.h"
-#include "../include/headers/struct.h"
+#include "../include/headers/globals.h"
 #include "../include/headers/keys.h"
+#include "../include/headers/buttons.h"
+
 
 const int WIDTH = 800;
 const int HEIGHT = 600;
 Music music;
+
 
 ProgBar bar;
 VolBar vbar;
@@ -16,11 +19,14 @@ BoolState state;
 int main() {
 
 	InitWindow(WIDTH, HEIGHT, "Hess");
-	SetTargetFPS(60);
 	InitAudioDevice();
+    init_button();
+    
+    SetTargetFPS(60);
 	
 	const char* filePath = nullptr;
 	char fileName[512] = {0};  
+	
 	
 	while (!WindowShouldClose()) {
 		if (state.musicLoaded) {
@@ -33,7 +39,6 @@ int main() {
         CheckIfMusicIsLoaded(state, rt);
         // keys set for use
 		input_keys(state, vbar, rt);
-		
 
 		BeginDrawing();
 		ClearBackground(GRAY);
@@ -41,15 +46,21 @@ int main() {
         PrintFilePath(filePath, fileName);
 		// Draw the progress bars
 		render_bar(bar, vbar, rt, state);
+		// draw buttons
+        draw_buttons();
+        CheckPressedBtn(state, rt);
 		EndDrawing();
 	}
 
+    
 	
 	if (state.musicLoaded) {
 	 	StopMusicStream(music);       
      	UnloadMusicStream(music);    
 	}
 	
+    cleanup_buttons();
+
 	CloseAudioDevice();
 	CloseWindow();
 	
